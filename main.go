@@ -5,6 +5,7 @@ import (
 	"fmt"
 	log "github.com/sirupsen/logrus"
 	"net/http"
+	"strconv"
 )
 
 func main() {
@@ -18,6 +19,19 @@ func main() {
 }
 
 func handler(w http.ResponseWriter, r *http.Request) {
+	filterExtremeEnabled := true
+	if keys, ok := r.URL.Query()["filterExtremeEnabled"]; ok && len(keys) > 0 {
+		// todo uncomment after switching to own library with errors handling
+		//config := configuration.ParseString(fmt.Sprintf("key:%s", keys[0]))
+		//filterExtremeEnabled = config.GetBoolean("key", filterExtremeEnabled)
+		if key, err := strconv.ParseBool(keys[0]); err == nil {
+			filterExtremeEnabled = key
+		} else {
+			log.Errorf("cannot parse filterExtremeEnabled value {%s}: %s", keys[0], err)
+		}
+	}
+	log.Infof("filterExtremeEnabled: %v", filterExtremeEnabled)
+
 	tickers, err3 := doTheJob()
 	if err3 != nil {
 		log.Error(err3)
