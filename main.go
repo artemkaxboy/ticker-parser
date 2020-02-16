@@ -48,13 +48,13 @@ func handler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+	w.WriteHeader(200)
 	_, err2 := w.Write(result)
 	if err2 != nil {
 		log.Error(err2)
 		w.WriteHeader(500)
 		return
 	}
-	w.WriteHeader(200)
 }
 
 func doTheJob() (*tickerCollection, error) {
