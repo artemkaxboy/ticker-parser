@@ -21,7 +21,7 @@ type Properties struct {
 	}
 
 	Parser struct {
-		Url string `hocon:"node=url"`
+		URL string `hocon:"node=url"`
 	} `hocon:"node=parser"`
 }
 

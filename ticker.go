@@ -7,13 +7,15 @@ import (
 	"time"
 )
 
+//nolint GoUnusedType
 type apiResponse struct {
-	ApiVersion string      `json:"apiVersion"`
+	APIVersion string      `json:"apiVersion"`
 	Method     string      `json:"method"`
 	Data       interface{} `json:"data"`
 	Error      error       `json:"error"`
 }
 
+//nolint GoUnusedType
 type apiError struct {
 	Code    int16  `json:"code"`
 	Message string `json:"message"`

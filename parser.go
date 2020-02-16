@@ -26,15 +26,6 @@ func getPriceValue(rawText string) (float64, error) {
 	return value, err
 }
 
-func lastLevelTable(_ int, selection *goquery.Selection) bool {
-	return selection.Has("table").Length() == 0
-}
-
-func containsVerdana(_ int, selection *goquery.Selection) bool {
-	outerHTML, err := selection.Html()
-	return err == nil && strings.Contains(outerHTML, "Verdana")
-}
-
 // Parse extracts satellite items from given reader and sends them to given chData channel.
 // Occurred errors are sent to chErr channel. url string is used for tracing purposes only.
 func Parse(url string, reader io.Reader, chData chan stockTicker, chErr chan error) {
@@ -165,7 +156,7 @@ func parseOnline() (*[]stockTicker, []error) {
 	ongoing := 0
 
 	//for _, url := range getProperties().Parser.Urls {
-	go parseOnlinePage(getProperties().Parser.Url, ch, chErr, chQuit)
+	go parseOnlinePage(getProperties().Parser.URL, ch, chErr, chQuit)
 	//}
 
 	var tickers []stockTicker

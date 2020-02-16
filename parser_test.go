@@ -1,17 +1,6 @@
 package main
 
-import (
-	"github.com/PuerkitoBio/goquery"
-	"io"
-	"net/http"
-	"reflect"
-	"testing"
-)
-
-func Test1(t *testing.T) {
-
-}
-
+/*
 func TestParse(t *testing.T) {
 	type args struct {
 		url    string
@@ -184,3 +173,4 @@ func Test_parseOnlinePage(t *testing.T) {
 		})
 	}
 }
+*/
