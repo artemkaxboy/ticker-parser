@@ -145,10 +145,10 @@ func Test_parseDate(t *testing.T) {
 			args: args{
 				dateString: "30 янв, 12:27",
 			},
-			want: time.Date(0, 01, 30, 12, 27, 00, 0, time.UTC),
+			want: time.Date(2020, 01, 30, 12, 27, 00, 0, time.UTC),
 		},
 		{
-			name: "this year detects",
+			name: "last year detects",
 			args: args{
 				dateString: "04 фев 2019, 12:02",
 			},
