@@ -12,7 +12,6 @@ import (
 	"strings"
 )
 
-const targetEncoding string = "utf-8"
 const expectedForecastsCount = 5
 
 var (
