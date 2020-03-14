@@ -8,7 +8,7 @@ import (
 	"strconv"
 )
 
-var revision = "v0.0.0"
+var revision = "unknown"
 
 func main() {
 	fmt.Printf("ticker-parser - %s\n", revision)

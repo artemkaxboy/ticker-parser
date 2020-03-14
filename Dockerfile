@@ -22,18 +22,18 @@ RUN \
     echo "runs outside of CI" && version=$(/script/git-rev.sh); \
     else version=${GIT_BRANCH}-${GITHUB_SHA:0:7}-$(date +%Y%m%dT%H:%M:%S); fi && \
     echo "version=$version" && \
-    go build -o feed-master -ldflags "-X main.revision=${version} -s -w" ./app
+    go build -o ticker-parser -ldflags "-X main.revision=${version} -s -w" ./app
 
 
 FROM umputun/baseimage:app-latest
 
-COPY --from=build /build/feed-master/feed-master /srv/feed-master
-COPY app/webapp /srv/webapp
+COPY --from=build /build/ticker-parser/ticker-parser /srv/ticker-parser
+
 RUN \
     chown -R app:app /srv && \
-    chmod +x /srv/feed-master
+    chmod +x /srv/ticker-parser
 
 WORKDIR /srv
 
-CMD ["/srv/feed-master"]
+CMD ["/srv/ticker-parser"]
 ENTRYPOINT ["/init.sh"]
