@@ -7,11 +7,11 @@ import (
 
 // Properties struct is used for loading and providing access to configuration file.
 type Properties struct {
-	LogLevel string `hocon:"node=logLevel,default=info"`
+	Debug bool `hocon:"node=debug,default=false"`
 
 	Server struct {
-		Port int64 `hocon:"default=8080"`
-	}
+		Port int64 `hocon:"node=port,default=8080"`
+	} `hocon:"node=server"`
 
 	Filters struct {
 		ExtremeValues struct {

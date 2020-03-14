@@ -8,10 +8,13 @@ import (
 	"strconv"
 )
 
+var revision = "v0.0.0"
+
 func main() {
-	level, err := log.ParseLevel(getProperties().LogLevel)
-	if err == nil {
-		log.SetLevel(level)
+	fmt.Printf("ticker-parser - %s\n", revision)
+
+	if getProperties().Debug {
+		log.SetLevel(log.DebugLevel)
 	}
 
 	http.HandleFunc("/", handler)
