@@ -21,7 +21,12 @@ type Properties struct {
 	}
 
 	Parser struct {
-		URL string `hocon:"node=url"`
+		Catalog struct {
+			BaseUrl  string `hocon:"node=baseUrl,default=www"`
+			PageSize int16  `hocon:"node=pageSize,default=25"`
+		} `hocon:"node=catalog"`
+
+		URL string `hocon:"node=url,default=www.site.com"`
 	} `hocon:"node=parser"`
 }
 
@@ -34,7 +39,10 @@ func getProperties() *Properties {
 	if props == nil {
 		props = &Properties{}
 		if err := hocon.LoadConfigFile("ticker-parser.conf", props); err != nil {
-			logrus.WithError(err).Fatal("cannot load properties")
+			logrus.Warn("cannot load properties file ticker-parser.conf")
+			if err := hocon.LoadConfigText("", props); err != nil {
+				logrus.WithError(err).Fatal("cannot load properties")
+			}
 		}
 	}
 	return props

@@ -8,6 +8,7 @@ import (
 )
 
 //nolint GoUnusedType
+//noinspection GoUnusedType
 type apiResponse struct {
 	APIVersion string      `json:"apiVersion"`
 	Method     string      `json:"method"`
@@ -16,6 +17,7 @@ type apiResponse struct {
 }
 
 //nolint GoUnusedType
+//noinspection GoUnusedType
 type apiError struct {
 	Code    int16  `json:"code"`
 	Message string `json:"message"`

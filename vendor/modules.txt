@@ -5,7 +5,7 @@ github.com/andybalholm/cascadia
 # github.com/artemkaxboy/configuration v0.0.0-20200109034048-a3def9c7c257
 github.com/artemkaxboy/configuration
 github.com/artemkaxboy/configuration/hocon
-# github.com/artemkaxboy/go-hocon v0.3.0
+# github.com/artemkaxboy/go-hocon v0.3.1
 github.com/artemkaxboy/go-hocon
 # github.com/konsorten/go-windows-terminal-sequences v1.0.1
 github.com/konsorten/go-windows-terminal-sequences

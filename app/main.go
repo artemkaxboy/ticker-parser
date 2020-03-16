@@ -17,7 +17,9 @@ func main() {
 		log.SetLevel(log.DebugLevel)
 	}
 
-	http.HandleFunc("/", handler)
+	http.HandleFunc("/ticker/", handler)
+	http.HandleFunc(catalogGetHandlerPath, catalogGetHandler)
+
 	log.Fatal(http.ListenAndServe(fmt.Sprintf(":%d", getProperties().Server.Port), nil))
 }
 

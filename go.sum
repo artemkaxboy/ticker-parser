@@ -4,8 +4,8 @@ github.com/andybalholm/cascadia v1.1.0 h1:BuuO6sSfQNFRu1LppgbD25Hr2vLYW25JvxHs5z
 github.com/andybalholm/cascadia v1.1.0/go.mod h1:GsXiBklL0woXo1j/WYWtSYYC4ouU9PqHO0sqidkEA4Y=
 github.com/artemkaxboy/configuration v0.0.0-20200109034048-a3def9c7c257 h1:62WPSh6WoyEgappFvRy0g1M5ggr3yoKlMf3HTEW0L+o=
 github.com/artemkaxboy/configuration v0.0.0-20200109034048-a3def9c7c257/go.mod h1:FMzJ/qI0jswm0r7GEhHbduU7jEcWZLWx0/L1JKtDhKI=
-github.com/artemkaxboy/go-hocon v0.3.0 h1:tFtlgIxJogawAWR813OX2lU1/W9JRPZtfm7Y6FJ7hRc=
-github.com/artemkaxboy/go-hocon v0.3.0/go.mod h1:EW/6GfBT7ZJn6BsNRtSpn6VW9M+HdM8mBE0YqqIBOAY=
+github.com/artemkaxboy/go-hocon v0.3.1 h1:b6HDSuLrJ98gBDm4oPt6oTFC++V0+zoq/auxIM6HibU=
+github.com/artemkaxboy/go-hocon v0.3.1/go.mod h1:EW/6GfBT7ZJn6BsNRtSpn6VW9M+HdM8mBE0YqqIBOAY=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
